@@ -1,0 +1,449 @@
+:root {
+    --color_black: #000000;
+    --color_darkblue: #1D2B53;
+    --color_darkpurple: #7E2553;
+    --color_darkgreen: #008751;
+    --color_darkgrey: #5F574F;
+    --color_lightgrey: #C2C3C7;
+    --color_white: #FFFFFF;
+    --color_red: #FF004D;
+    --color_orange: #FFA300;
+    --color_yellow: #FFEC27;
+    --color_green: #00E436;
+    --color_blue: #29ADFF;
+    --color_lavender: #83769C;
+    --color_pink: #FF77A8;
+    --color_lightpeach: #FFCCAA;
+}
+
+@font-face {
+    font-family: "PressStart2P";
+    src: url("fonts/press_start_2p.ttf") format("truetype");
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Press Start 2P', cursive; */
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--color_black);
+}
+
+:focus,
+:focus-visible {
+    outline: 0;
+    border: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: var(--color_black);
+}
+
+a {
+    text-decoration:  none;
+    color: var(--color_blue);
+    font-size: 1rem;
+    margin: 0 0 0 0.375rem;
+}
+a:first-child {
+    margin: 0 auto 0 0;
+}
+
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: var(--color_white);
+    box-shadow: 0 6px 6px #00000025;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.header_container {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    padding: 0 0.75rem;;
+}
+
+footer {
+
+}
+.footer_container {
+
+}
+
+.contact_icon_mobile {
+    display: none;
+}
+
+.contact_container_desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+ul {
+    margin: 2rem 0 0 0;
+    flex: 1;
+    width: 100%;
+    display: grid;
+    gap: 0;
+    /* Der Browser erzeugt so viele Spalten wie hinein passen, abhängig von der verfügbaren Breite. */
+    /* Überzählige leere Spalten verschwinden automatisch (anders als bei auto-fill). */
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    /* Die Spalte darf maximal 1240px breit werden. */
+    /* Aber nie breiter als 100% des Containers, falls der Container kleiner ist. */
+}
+
+.image_container {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+.image_container video,
+.image_container figure {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.image_container video {
+    background-color: var(--color_black);
+}
+.image_container figcaption {
+    display: none;
+}
+.image_container dialog figcaption {
+    display: block;
+}
+.image_container dialog figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0.375rem;
+    font-size: 0.75rem;
+    max-width: 100vw;
+    text-align: center;
+    color: var(--color_black);
+    background-color: var(--color_white);
+}
+.image_container figure img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.image_container:hover figure img,
+.image_container:hover .cube_container {
+    transform: scale(1.25);
+}
+.image_container:hover dialog figure img,
+.image_container:hover dialog .cube_container {
+    transform: scale(1);
+}
+.image_container dialog figure {
+
+}
+.image_container dialog figure img {
+    display: block;
+    max-height: 80vh;
+    max-width: 100vw;
+}
+
+.image_container dialog {
+    display: inline-block;
+    box-sizing: border-box;
+    width: fit-content;
+    min-width: max-content;
+    max-width: 1000px;
+    height: fit-content;
+    min-height: max-content;
+    max-height: 100%;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    box-shadow: 6px 6px 6px #00000050;
+}
+.image_container dialog::backdrop {
+    background-color: #FFFFFFEE;
+}
+
+.image_container dialog .close_button {
+    position: absolute;
+    display: inline;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    cursor: pointer;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////// ja_fake_tile.js START */
+.js_fake_tile {
+    font-family: "PressStart2P";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 2rem;
+    color: var(--color_white);
+    
+    animation-name: color-fade;
+    animation-duration: 1s;
+    animation-timing-function: step-end; /* Beschleunigen/Abbremsen */
+    animation-iteration-count: infinite; /* Unendlich wiederholen */
+    background-color: var(--color_blue); 
+}
+
+@keyframes color-fade {
+    0% {
+        background-color: var(--color_red);
+    }
+    25% {
+        background-color: var(--color_blue);
+    }
+    50% {
+        background-color: var(--color_blue);
+    }
+    75% {
+        background-color: var(--color_blue);
+    }
+    100% {
+        background-color: var(--color_blue);
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////// ja_fake_tile.js ENDE */
+
+/*/////////////////////////////////////////////////////////////////////////////////// ja_snow.js START */
+.js_snow {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+    background-color: var(--color_black);
+}
+
+.snowflake {
+    position: absolute;
+    top: -25px;
+    background-color: var(--color_white);
+    pointer-events: none;
+    transform: translateZ(0);
+    will-change: transform;
+    animation: animation_snow linear infinite;
+}
+
+@keyframes animation_snow {
+    to { transform: translateY(480px); }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////// ja_snow.js ENDE */
+
+/*/////////////////////////////////////////////////////////////////////////////////// js_guess_number.js START */
+.js_guess_number {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    font-size: 0.875rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color_blue);
+}
+.js_guess_number div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.js_guess_number input[type="text"],
+.js_guess_number button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 0;
+    margin: 0;
+}
+.wrong_right_container,
+.js_guess_number .input_number_container {
+    background-color: var(--color_white);
+}
+.js_guess_number input[type="text"],
+.js_guess_number button {
+    color: var(--color_blue);
+    background-color: var(--color_white);
+}
+.js_guess_number .wrongOrRight,
+.js_guess_number .highOrLow {
+    color: var(--color_red);
+}
+/*/////////////////////////////////////////////////////////////////////////////////// js_guess_number.js ENDE */
+
+/*/////////////////////////////////////////////////////////////////////////////////// cube START */
+.cube_container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+dialog .cube_container {
+    max-width: 500px;
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    transform-style:preserve-3d;
+    animation: spin 20s linear infinite;
+}
+dialog .cube {
+    width: 200px;
+    height: 200px;
+}
+
+.cube div {
+    position:absolute;
+    width: 100px;
+    height: 100px;
+}
+dialog .cube div {
+    position:absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.f1 { 
+    transform:rotateY(0deg) translateZ(50px); 
+    background-color: var(--color_lightpeach);
+}
+dialog .f1 { 
+    transform:rotateY(0deg) translateZ(100px); 
+    background-color: var(--color_lightpeach);
+}
+.f2 { 
+    transform:rotateY(90deg) translateZ(50px); 
+    background-color: var(--color_blue);
+}
+dialog .f2 { 
+    transform:rotateY(90deg) translateZ(100px); 
+    background-color: var(--color_blue);
+}
+.f3 { 
+    transform:rotateY(180deg) translateZ(50px); 
+    background-color: var(--color_green);      
+}
+dialog .f3 { 
+    transform:rotateY(180deg) translateZ(100px); 
+    background-color: var(--color_green);      
+}
+.f4 { 
+    transform:rotateY(-90deg) translateZ(50px); 
+    background-color: var(--color_pink);
+}
+dialog .f4 { 
+    transform:rotateY(-90deg) translateZ(100px); 
+    background-color: var(--color_pink);
+}
+.f5 { 
+    transform:rotateX(90deg) translateZ(50px); 
+    background-color: var(--color_orange);
+}
+dialog .f5 { 
+    transform:rotateX(90deg) translateZ(100px); 
+    background-color: var(--color_orange);
+}
+.f6 { 
+    transform:rotateX(-90deg) translateZ(50px); 
+    background-color: var(--color_yellow);
+}
+dialog .f6 { 
+    transform:rotateX(-90deg) translateZ(100px); 
+    background-color: var(--color_yellow);
+}
+
+@keyframes spin {
+    0% { transform:rotateX(0) rotateY(0); }
+    100% { transform:rotateX(360deg) rotateY(360deg); }
+}
+/*/////////////////////////////////////////////////////////////////////////////////// cube ENDE */
+
+
+@media (max-width: 600px) {
+    .contact_icon_mobile {
+        display: block;
+    }   
+    .contact_label_mobile {
+        display: none;
+    }
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+.overflow_auto {
+    overflow: auto;
+}
+
+.display_none {
+    display: none!important;
+}
+.display_block {
+    display: block!important;
+}
+.display_inline {
+    display: inline!important;
+}
+.display_inline_block {
+    display: inline-block!important;
+}
+
