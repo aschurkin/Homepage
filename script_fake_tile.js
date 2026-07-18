@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const allTiles = document.querySelectorAll(".image_container");
+    const allTiles = document.querySelectorAll(".image_box");
     
     allTiles.forEach(function (tile, indexA) { // indexA hinzugefügt, um den Index des aktuellen Elements zu speichern
         tile.addEventListener("mouseover", function () {
             // Element A (das gehoverte Element, das verschoben werden soll)
             const fakeTile = this.querySelector(".js_fake_tile"); 
-            const currentPosition = fakeTile?.closest(".image_container"); // .closest wird auch funktionieren
+            const currentPosition = fakeTile?.closest(".image_box"); // .closest wird auch funktionieren
             
             if (currentPosition) { 
                 let randomIndex;
