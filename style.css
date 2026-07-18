@@ -106,11 +106,15 @@ li {
     padding: 0 0.875rem 0.75rem 0.875rem;
 }
 li:focus-visible {
+    /*
     outline: 24px solid var(--color_white)!important;
     outline-offset: -23px!important;   
     z-index: 5!important; 
-    /*filter: invert(100%) grayscale(100%) blur(2px) !important;*/
-    /*filter: blur(2px) !important;*/
+    filter: invert(100%) grayscale(100%) blur(2px) !important;
+    filter: blur(2px) !important;*/
+    outline: 8px dashed var(--color_red) !important;
+    outline-offset: -40px !important;
+    z-index: 5 !important;
 }
 
 ul.image_container, .image_container li {
