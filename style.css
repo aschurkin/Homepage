@@ -87,12 +87,13 @@ header {
     padding: 0 0.75rem;;
 }
 
-footer {
-
+main {}
+.main_container {
+    margin: 2rem 0 0 0;
 }
-.footer_container {
 
-}
+footer {}
+.footer_container {}
 
 .contact_icon_mobile {
     display: none;
@@ -107,7 +108,7 @@ footer {
 }
 
 ul {
-    margin: 2rem 0 0 0;
+    margin: 0;
     flex: 1;
     width: 100%;
     display: grid;
