@@ -60,6 +60,15 @@ h2 {
     color: var(--color_black);
     padding: 1.5rem 0.75rem 0.75rem 0.75rem;
 }
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: var(--color_black);
+    padding: 1.5rem 0.75rem 0.75rem 0.75rem;
+}
 p {
     font-size: 1rem;
     font-weight: 400;
