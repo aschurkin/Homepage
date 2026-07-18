@@ -115,7 +115,7 @@ ul.image_container, .image_container li {
 header {
     width: 100%;
     background-color: var(--color_white);
-    box-shadow: 0 6px 6px #00000025;
+    box-shadow: 0 6px 6px #00000010;
     position: fixed;
     top: 0;
     z-index: 1;
