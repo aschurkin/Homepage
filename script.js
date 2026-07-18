@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Öffnen und Schließen eine Dialog-Elements und deaktivieren/aktivieren der Scroll-Funktion
-    let allImageContainer = document.querySelectorAll(".image_container");
+    let allImageContainer = document.querySelectorAll(".image_box");
    
     allImageContainer.forEach(function(container) {
         container.addEventListener("click", function(event) {
+
             // Neues Dialog-Element erstellen
             let newDialogElement = document.createElement("dialog");
             
