@@ -112,8 +112,8 @@ li:focus-visible {
     z-index: 5!important; 
     filter: invert(100%) grayscale(100%) blur(2px) !important;
     filter: blur(2px) !important;*/
-    outline: 8px dashed var(--color_red) !important;
-    outline-offset: -40px !important;
+    outline: 20px dashed var(--color_white) !important;
+    outline-offset: -19px !important;
     z-index: 5 !important;
 }
 
