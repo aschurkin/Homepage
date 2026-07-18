@@ -51,6 +51,24 @@ h1 {
     line-height: 1.5rem;
     color: var(--color_black);
 }
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: var(--color_black);
+    padding: 1.5rem 0.75rem 0.75rem 0.75rem;
+}
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: var(--color_black);
+    padding: 0 0.75rem 0.75rem 0.75rem;
+}
 
 a {
     text-decoration:  none;
@@ -87,7 +105,9 @@ header {
     padding: 0 0.75rem;;
 }
 
-main {}
+main {
+    width: 100%;
+}
 .main_container {
     margin: 2rem 0 0 0;
 }
