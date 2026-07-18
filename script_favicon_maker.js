@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
             favicon.href = canvas.toDataURL("image/png");
 
             // Zum nächsten Index wechseln (Endlosschleife)
-            colorIndex = (colorIndex + 1) % colors.length;
+            colorIndex = colorIndex + 1;
+            if (colorIndex >= colors.length) {
+                colorIndex = 0;
+            }
         }
     }
 
