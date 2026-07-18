@@ -152,7 +152,7 @@ ul {
     max-width: 100vw;
     text-align: center;
     color: var(--color_black);
-    background-color: var(--color_white);
+    background-color: #FFFFFF90;
 }
 .image_container figure img {
     width: 100%;
@@ -208,7 +208,7 @@ ul {
     border: 0;
     cursor: pointer;
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF90;
 }
 
 
