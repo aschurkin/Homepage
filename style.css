@@ -78,6 +78,13 @@ p {
     color: var(--color_black);
     padding: 0 0.75rem 0.75rem 0.75rem;
 }
+small {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: var(--color_black);
+    padding: 0 0.75rem 0.75rem 0.75rem;
+}
 
 a {
     text-decoration:  none;
@@ -89,6 +96,15 @@ a:first-child {
     margin: 0 auto 0 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: inside;
+    margin: 0;
+    padding: 0 0.875rem 0.75rem 0.875rem;
+}
 
 ul.image_container, .image_container li {
     list-style: none;
