@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const allTiles = document.querySelectorAll(".image_container");
     
     allTiles.forEach(function (tile, indexA) { // indexA hinzugefügt, um den Index des aktuellen Elements zu speichern
-        tile.addEventListener("mouseover", function () {
+        tile.addEventListener("click", function () {
             // Element A (das gehoverte Element, das verschoben werden soll)
             const fakeTile = this.querySelector(".js_fake_tile"); 
             const currentPosition = fakeTile?.closest(".image_container"); // .closest wird auch funktionieren
