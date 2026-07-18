@@ -448,7 +448,7 @@ dialog .f6 {
 /*/////////////////////////////////////////////////////////////////////////////////// cube ENDE */
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .contact_icon_mobile {
         display: block;
     }   
